@@ -1,0 +1,13 @@
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+<p><%= link_to 'トップページ', books_path %></p>
+
+<% if @user.id == current_user.id %>
+<p><%= link_to '編集ページ', edit_user_registration_path %></p>
+<% end %>
+
+<h1>ユーザー情報</h1>
+<p>名前 : <%= @user.username %></p>
+<p>メールアドレス : <%= @user.email %></p>
+<p>郵便番号 : <%= @user.postal_code %></p>
+<p>住所 : <%= @user.address %></p>
+<p>プロフィール : <%= @user.description %></p>
