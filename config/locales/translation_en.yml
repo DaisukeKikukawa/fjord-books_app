@@ -1,0 +1,32 @@
+en:
+  books:
+    index:
+      title: "Main Title"
+    new:
+      new_book: "New Book"
+    edit:
+      edit_book: "Edit Book"
+    create:
+      created: The book was successfully created
+    destroy:
+      destroyed: The book was successfully destroyed
+    update:
+      updated: The book was successfully updated
+
+  activerecord:
+    models:
+      book: Book
+
+    attributes:
+      book:
+        author: Author
+        memo: Memo
+        picture: Picture
+        title: Title
+
+  button:
+    edit: Edit
+    back: Back
+    show: Show
+    destroy: Destroy
+    new: New
