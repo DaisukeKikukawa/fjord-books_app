@@ -1,0 +1,33 @@
+ja:
+  books:
+    index:
+      title: "本の一覧"
+    new:
+      new_book: "新規投稿"
+    edit:
+      edit_book: "編集"
+    create:
+      created: 登録しました
+    destroy:
+      destroyed: 削除しました
+    update:
+      updated: 更新しました
+
+  activerecord:
+    models:
+      book: 本
+
+    attributes:
+      book:
+        author: 著者
+        memo: メモ
+        picture: 写真
+        title: 題名
+
+  button:
+    edit: 編集
+    back: 戻る
+    show: 詳細
+    index: 一覧
+    destroy: 削除
+    new: 新規投稿
