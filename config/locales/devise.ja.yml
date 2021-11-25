@@ -44,6 +44,8 @@ ja:
     links:
       sign_up: '新規登録'
       log_in: 'ログイン'
+      log_out: 'ログアウト'
+      top_page: 'トップページ'
     edit_page:
       leave_blank: '変更しない場合空欄のままで構いません'
       current_password: '変更するには現在のパスワードが必要です'

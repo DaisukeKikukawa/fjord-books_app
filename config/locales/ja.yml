@@ -212,6 +212,8 @@ ja:
       destroy: 削除
       new: 新規作成
       back: 戻る
+      users_index: ユーザー一覧
+      user_show: ユーザー詳細
       delete_confirm: よろしいですか？
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"
