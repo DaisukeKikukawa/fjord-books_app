@@ -11,7 +11,9 @@ ja:
         picture: 画像  #g
         title: 題名  #g
       user:
-        name: 氏名
+        username: 氏名
         postal_code: 郵便番号
         address: 住所
-        self_introduction: 自己紹介文
+        description: 自己紹介文
+        avatar: 画像
+        avatar_selected: 現在の画像
