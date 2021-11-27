@@ -12,7 +12,7 @@
 
 <p>
   <strong><%= User.human_attribute_name(:name) %>:</strong>
-  <%= @user.name %>
+  <%= @user.username %>
 </p>
 
 <p>
@@ -27,7 +27,7 @@
 
 <p>
   <strong><%= User.human_attribute_name(:self_introduction) %>:</strong>
-  <%= @user.self_introduction %>
+  <%= @user.description %>
 </p>
 
 <% if current_user == @user %>
