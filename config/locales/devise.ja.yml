@@ -53,6 +53,7 @@ ja:
       unhappy: 'よろしいですか？'
     registrations:
       edit: '編集ページ'
+      waiting_confirmation: '現在確認中です'
       sign_up: '新規登録ページ'
       log_in: 'ログインページ'
       characters_minimum: '文字以上'

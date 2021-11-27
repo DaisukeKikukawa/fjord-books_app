@@ -231,3 +231,10 @@ ja:
   devise:
     common:
       Sign up: "新規登録"
+  mailer:
+    common:
+      title: "ようこそ"
+      change_my_password: "パスワードの変更"
+      notify_password_changed: "パスワードが変更されたことをお知らせいたします"
+      ignore_email: "覚えがないのにこのメールが届いたという方ご迷惑をおかけし申し訳ありません"
+      create_new_password: "下記のリンクをクリックすると、新しいパスワードが作成されます"

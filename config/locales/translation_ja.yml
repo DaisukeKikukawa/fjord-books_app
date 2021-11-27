@@ -10,7 +10,9 @@ ja:
       address: "住所"
       profile: "プロフィール"
     edit:
-      title: "うんこ"
+      title: "編集画面"
+  mailer:
+    title: 'ようこそ'
 
   activerecord:
     models:
