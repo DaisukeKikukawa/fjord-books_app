@@ -15,6 +15,9 @@ ja:
       unauthenticated: 'アカウント登録もしくはログインしてください。'
       unconfirmed: 'メールアドレスの本人確認が必要です。'
     mailer:
+      confirm_new_password: '新しいパスワードを確認してください'
+      new_password: '新しいパスワード'
+      change_your_password: 'パスワードの変更'
       forgot_your_password: 'パスワードをお忘れですか？'
       confirmation_instructions:
         subject: 'アカウントの有効化について'
@@ -34,6 +37,7 @@ ja:
       updated: 'パスワードが正しく変更されました。'
       updated_not_active: 'パスワードが正しく変更されました。'
     button:
+      change_my_password: 'パスワードを変更する'
       sign_up: '新規登録'
       log_in: 'ログイン'
       forgot_your_password: 'パスワードをお忘れですか？'
