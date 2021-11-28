@@ -1,4 +1,19 @@
 ja:
+  users:
+    index:
+      title: "ユーザー一覧"
+    show:
+      title: "詳細情報"
+      name: "名前"
+      mail_address: "メールアドレス"
+      postal_code: "郵便番号"
+      address: "住所"
+      profile: "プロフィール"
+    edit:
+      title: "編集画面"
+  mailer:
+    title: 'ようこそ'
+
   activerecord:
     models:
       book: 本  #g

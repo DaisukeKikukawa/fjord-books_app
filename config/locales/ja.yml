@@ -212,6 +212,8 @@ ja:
       destroy: 削除
       new: 新規作成
       back: 戻る
+      users_index: ユーザー一覧
+      user_show: ユーザー詳細
       delete_confirm: よろしいですか？
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"
@@ -226,3 +228,13 @@ ja:
       notice_create: "%{name}が作成されました。"
       notice_update: "%{name}が更新されました。"
       notice_destroy: "%{name}が削除されました。"
+  devise:
+    common:
+      Sign up: "新規登録"
+  mailer:
+    common:
+      title: "ようこそ"
+      change_my_password: "パスワードの変更"
+      notify_password_changed: "パスワードが変更されたことをお知らせいたします"
+      ignore_email: "覚えがないのにこのメールが届いたという方ご迷惑をおかけし申し訳ありません"
+      create_new_password: "下記のリンクをクリックすると、新しいパスワードが作成されます"

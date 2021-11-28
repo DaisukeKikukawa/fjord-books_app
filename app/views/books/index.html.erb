@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<p><%= link_to t('views.common.users_index'), users_path %></p>
+<p><%= link_to t('views.common.user_show'), user_path(current_user) %></p>
+<p><%= link_to t('devise.links.log_out'), destroy_user_session_path, method: :delete %></p>
+
 <h1><%= Book.model_name.human %></h1>
 
 <table>
