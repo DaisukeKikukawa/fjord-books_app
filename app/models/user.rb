@@ -14,13 +14,13 @@ class User < ApplicationRecord
     following_users.include?(other_user)
   end
 
-  ham_many :followers,
+  has_many :followers,
             class_name: 'Follow',
             foreign_key: 'follower_id',
             dependent: :destroy,
             inverse_of: :follower
 
-  ham_many :followings,
+  has_many :followings,
             class_name: 'Follow',
             foreign_key: 'following_id',
             dependent: :destroy,
