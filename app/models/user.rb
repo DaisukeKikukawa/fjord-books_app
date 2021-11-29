@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-
   def follow(other_user_id)
     followers.create(following_id: other_user_id)
   end
@@ -15,16 +14,16 @@ class User < ApplicationRecord
   end
 
   has_many :followers,
-            class_name: 'Follow',
-            foreign_key: 'follower_id',
-            dependent: :destroy,
-            inverse_of: :follower
+           class_name: 'Follow',
+           foreign_key: 'follower_id',
+           dependent: :destroy,
+           inverse_of: :follower
 
   has_many :followings,
-            class_name: 'Follow',
-            foreign_key: 'following_id',
-            dependent: :destroy,
-            inverse_of: :following
+           class_name: 'Follow',
+           foreign_key: 'following_id',
+           dependent: :destroy,
+           inverse_of: :following
 
   has_many :following_users, through: :followers, source: :following
 
