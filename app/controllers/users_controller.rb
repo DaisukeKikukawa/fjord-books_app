@@ -2,7 +2,7 @@
 
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_user, only: %I[show edit update destroy followings followers]
+  before_action :ser_user, only: %I[show edit update destroy followings followers]
 
   def index
     @users = User.with_attached_avatar.order(:id).page(params[:page])
