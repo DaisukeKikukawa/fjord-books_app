@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= Report.human_attribute_name(:show_title) %></h1>
+
+<p>
+  <strong><%= Report.human_attribute_name(:user) %>:</strong>
+  <%= @report.user.name %>
+</p>
+
 <p>
   <strong><%= Report.human_attribute_name(:title) %>:</strong>
   <%= @report.title %>
@@ -10,5 +17,13 @@
   <%= @report.content %>
 </p>
 
+<p>
+  <strong><%= Report.human_attribute_name(:created_at) %>:</strong>
+  <%= @report.created_at.to_s(:datetime_jp) %>
+</p>
+
 <%= link_to t('views.common.edit'), edit_report_path(@report) %> |
 <%= link_to t('views.common.back'), reports_path %>
+
+
+<%= render partial: 'comments/form', locals: {commentable: @report} %>
