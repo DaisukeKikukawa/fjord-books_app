@@ -4,6 +4,7 @@ ja:
       book: 本  #g
       user: ユーザ
       report: 日報
+      comment: コメント
 
     attributes:
       book:
@@ -18,6 +19,12 @@ ja:
         self_introduction: 自己紹介文
         avatar: ユーザ画像
       report:
+        user: 投稿者
         title: タイトル
         content: 本文
         created_at: 投稿日時
+        edit_title: 編集画面
+        show_title: 日報の詳細
+        comment: コメント
+      comment:
+        body: コメント
