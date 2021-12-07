@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'books#index'
   resources :books
 
-  resources :users do
+  resources :users, only: %i(index show) do
     member do
       get :followings, :followers
     end
