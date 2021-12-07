@@ -1,17 +1,6 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  def follow(other_user_id)
-    followers.create(following_id: other_user_id)
-  end
-
-  def unfollow(other_user)
-    followers.find_by(follower_id: other_user.id).destroy
-  end
-
-  def following?(other_user)
-    following_users.include?(other_user)
-  end
 
   has_many :followers,
            class_name: 'Follow',
@@ -33,4 +22,17 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :avatar
+
+  def follow(other_user_id)
+    followers.create(following_id: other_user_id)
+  end
+
+  def unfollow(other_user)
+    followers.find_by(follower_id: other_user.id).destroy
+  end
+
+  def following?(other_user)
+    following_users.include?(other_user)
+  end
+
 end
