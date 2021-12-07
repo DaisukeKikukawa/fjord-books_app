@@ -2,15 +2,15 @@
 
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :ser_user, only: %I[show edit update destroy followings followers]
+  before_action :set_user, only: %I[show followings followers]
 
   def index
     @users = User.with_attached_avatar.order(:id).page(params[:page])
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
+  # def show
+  #   @user = User.find(params[:id])
+  # end
 
   def followings
     @followings = @user.following_users
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   private
 
-  def ser_user
+  def set_user
     @user = User.find(params[:id])
   end
 end
