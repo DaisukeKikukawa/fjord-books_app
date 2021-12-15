@@ -2,6 +2,7 @@
 
 class ReportsController < ApplicationController
   before_action :set_report, only: %i[show edit update destroy]
+  before_action :contribute_user?, only: %i[edit update destroy]
 
   # GET /reports or /reports.json
   def index
@@ -28,7 +29,6 @@ class ReportsController < ApplicationController
       else
         render :new
       end
-
   end
 
   # PATCH/PUT /reports/1 or /reports/1.json
@@ -57,4 +57,11 @@ class ReportsController < ApplicationController
   def report_params
     params.require(:report).permit(:title, :content)
   end
+
+  def contribute_user?
+    return true if current_user == @report.user
+    redirect_to reports_path
+    flash[:alert] = t('controllers.common.notice_alert')
+  end
+
 end
