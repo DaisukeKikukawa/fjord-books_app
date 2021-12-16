@@ -2,7 +2,7 @@
 
 class ReportsController < ApplicationController
   before_action :set_report, only: %i[show edit update destroy]
-  before_action :contribute_user?, only: %i[edit update destroy]
+  before_action :check_is_contribute_user, only: %i[edit update destroy]
 
   # GET /reports or /reports.json
   def index
@@ -22,8 +22,7 @@ class ReportsController < ApplicationController
 
   # POST /reports or /reports.json
   def create
-    # @report = Report.new(report_params)
-    @report = current_user.reports.build(report_params)
+      @report = current_user.reports.build(report_params)
       if @report.save
         redirect_to @report, notice: t('views.common.created_report')
       else
@@ -58,10 +57,11 @@ class ReportsController < ApplicationController
     params.require(:report).permit(:title, :content)
   end
 
-  def contribute_user?
-    return true if current_user == @report.user
-    redirect_to reports_path
-    flash[:alert] = t('controllers.common.notice_alert')
+  def check_is_contribute_user
+    if current_user != @report.user
+      redirect_to reports_path
+      flash[:alert] = t('controllers.common.notice_alert')
+    end
   end
 
 end
