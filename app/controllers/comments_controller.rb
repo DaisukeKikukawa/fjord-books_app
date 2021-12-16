@@ -31,10 +31,11 @@ class CommentsController < ApplicationController
       render :new
     end
   end
-end
 
-private
+  private
 
-def comment_params
-  params.require(:comment).permit(:body)
+  def comment_params
+    params.require(:comment).permit(:body)
+  end
+
 end
