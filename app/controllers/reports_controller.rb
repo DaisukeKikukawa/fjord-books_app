@@ -22,21 +22,21 @@ class ReportsController < ApplicationController
 
   # POST /reports or /reports.json
   def create
-      @report = current_user.reports.build(report_params)
-      if @report.save
-        redirect_to @report, notice: t('views.common.created_report')
-      else
-        render :new
-      end
+    @report = current_user.reports.build(report_params)
+    if @report.save
+      redirect_to @report, notice: t('views.common.created_report')
+    else
+      render :new
+    end
   end
 
   # PATCH/PUT /reports/1 or /reports/1.json
   def update
-      if @report.update(report_params)
-        redirect_to @report, notice: t('views.common.updated_reprt')
-      else
-        render :edit
-      end
+    if @report.update(report_params)
+      redirect_to @report, notice: t('views.common.updated_reprt')
+    else
+      render :edit
+    end
   end
 
   # DELETE /reports/1 or /reports/1.json
@@ -63,5 +63,4 @@ class ReportsController < ApplicationController
       flash[:alert] = t('controllers.common.notice_alert')
     end
   end
-
 end
