@@ -213,11 +213,19 @@ ja:
       new: 新規作成
       back: 戻る
       delete_confirm: よろしいですか？
+      saving_error: 正常に保存されませんでした
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"
       title_show: "%{name}の詳細"
       sign_out: ログアウト
       minimum_length: "%{length}文字以上"
+      delete_confirm: "本当によろしいですか"
+      created_comment: "コメントが作成されました"
+      updated_comment: "コメントが更新されました"
+      destroyed_comment: "コメントが削除されました"
+      created_report: "レポートが作成されました"
+      updated_report: "コメントが更新されました"
+      destroyed_report: "コメントが削除されました"
     pagination:
       first: '最初'
       last: '最後'
@@ -245,6 +253,7 @@ ja:
       notice_create: "%{name}が作成されました。"
       notice_update: "%{name}が更新されました。"
       notice_destroy: "%{name}が削除されました。"
+      notice_alert: "不正なアクセスです"
   relationships:
     create:
       notice: "フォローしました。"
