@@ -25,7 +25,9 @@ class ReportsTest < ApplicationSystemTestCase
     fill_in '内容', with: @report.content
     click_on '登録する'
 
-    click_on '戻る'
+    assert_text '日報の作成に成功しました'
+    assert_text '日報のタイトル'
+    assert_text '日報の内容'
   end
 
   test 'updating a report' do
@@ -39,7 +41,6 @@ class ReportsTest < ApplicationSystemTestCase
     assert_text '日報が更新されました。'
     assert_text '本日の活動'
     assert_text '本日の活動報告です！'
-    click_on '戻る'
   end
 
   test 'destroying a report' do
